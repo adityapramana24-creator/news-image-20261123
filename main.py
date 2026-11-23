@@ -44,9 +44,10 @@ HEROES = [
         "num": 2, "region": "ASIA-PACIFIC",
         "kicker": "MARKETS \u00b7 ASIA",
         "headline": "Asia steadies after Friday's rout",
-        "body": ("Kospi fell 2.8% at the open as Seoul readied a "
-                 "stabilisation fund; the ASX erased early losses. US "
-                 "futures rebounded; gold rose to $3,577."),
+        "body": ("US futures rebounded after Friday's rout \u2014 Nasdaq "
+                 "100 +2.8%, S&P +2.0%; gold topped $3,600, Brent "
+                 "\u2248$92 flat. Tokyo closed for Labour Thanksgiving "
+                 "Day."),
         "art": "chart", "pin": (151.2, -33.9),
     },
     {
@@ -64,16 +65,16 @@ HEROES = [
 GRID = [
     {
         "num": 4, "region": "ASIA-PACIFIC", "kicker": "NEPAL\u2013INDIA",
-        "headline": "Shah meets Modi in New Delhi",
-        "body": ("Nepal's PM holds delegation talks in Delhi; MoUs and a "
-                 "$2bn aid ask."),
+        "headline": "India gives Nepal $1.62bn aid",
+        "body": ("Modi gives $1.62bn after 100-minute talks; train "
+                 "flagged off; Lower Arun dam begun."),
         "art": "flags", "pin": (77.2, 28.6),
     },
     {
         "num": 5, "region": "ASIA-PACIFIC", "kicker": "INDONESIA",
-        "headline": "Search goes on at candy factory",
-        "body": ("Teams sift the gutted Milkita plant in Cikande: 7 dead, "
-                 "~50 unaccounted for."),
+        "headline": "24 dead in candy factory fire",
+        "body": ("24 dead, ~30 missing at the gutted Milkita plant in "
+                 "Cikande; DNA ID may take weeks."),
         "art": "flame", "pin": (106.3, -6.0),
     },
     {
@@ -85,9 +86,9 @@ GRID = [
     },
     {
         "num": 7, "region": "EUROPE", "kicker": "UKRAINE",
-        "headline": "14 still missing in Dymer",
-        "body": ("Search goes on at a collapsed block north of Kyiv; "
-                 "3 killed, 14 still missing."),
+        "headline": "Dymer toll rises to 11",
+        "body": ("Toll 11 after a drone hit a block north of Kyiv; a boy, "
+                 "7, pulled alive after 14 hours."),
         "art": "building", "pin": (30.2, 50.8),
     },
     {
@@ -107,8 +108,8 @@ GRID = [
     {
         "num": 10, "region": "AFRICA", "kicker": "LIBYA",
         "headline": "UN urges Benghazi probe",
-        "body": ("The UN wants an inquiry into Benghazi attacks, incl. a "
-                 "blast on a Russian ship."),
+        "body": ("Merkury capsized; 10 hurt. Zelenskyy says a Ukrainian "
+                 "drone did it; UN seeks a probe."),
         "art": "flag", "pin": (20.1, 32.1),
     },
     {
@@ -127,20 +128,25 @@ GRID = [
     },
     {
         "num": 13, "region": "OCEANIA", "kicker": "CRICKET",
-        "headline": "India close in Wellington",
-        "body": ("New Zealand, 119/2 and 233 behind, bat to save the Test "
-                 "on the final day."),
+        "headline": "India\u2013NZ Test ends in a draw",
+        "body": ("New Zealand batted out the final day in Wellington; the "
+                 "Test ends in a draw."),
         "art": "cricket", "pin": (174.8, -41.3),
     },
 ]
 
-# Number strip: (big value, small label).
+# Number strip: (big value, small label). Eight values at sans-bold-34:
+# the wide ">$3,600" (161 px) sits between the two narrow values "24"
+# and "11" (48 px each) so no value's ink crosses a cell divider.
 NUMBERS = [
-    ("$150M", "AUSTRALIA'S COP31 SPEND, FOR NO DEAL"),
-    ("0", "FOSSIL-FUEL MENTIONS IN THE FINAL DRAFT"),
+    ("$150M", "AUSTRALIA'S COP31 SPEND"),
+    ("0", "FOSSIL-FUEL MENTIONS"),
     ("\u22125.3%", "NASDAQ, FRIDAY"),
-    ("+2.8%", "NASDAQ 100 FUTURES, MONDAY"),
-    ("$3,577", "GOLD AN OUNCE, MONDAY (+1.1%)"),
+    ("+2.8%", "NASDAQ 100 FUTURES, MON"),
+    ("24", "INDONESIA FIRE DEAD, MON"),
+    (">$3,600", "GOLD, MONDAY (+2.5%)"),
+    ("11", "DYMER TOLL, MONDAY"),
+    ("$1.6bn", "INDIA'S NEPAL AID"),
 ]
 
 # Briefs: (kicker, text, region). Verified Monday items only.
@@ -151,15 +157,23 @@ BRIEFS = [
      "ASIA-PACIFIC"),
     ("ISRAEL", "Ben-Gvir increases funding for four new firefighting helicopters.",
      "MIDDLE EAST"),
-    ("INDIA", "Tata Sons to decide on going public this week.", "ASIA-PACIFIC"),
+    ("INDIA", "Tata Sons to decide on listing this week.", "ASIA-PACIFIC"),
     ("INDIA\u2013NETHERLANDS",
      "Jaishankar and Dutch FM Berendsen review strategic partnership roadmap.",
      "ASIA-PACIFIC"),
-    ("INDIA", "JEE Main 2027 Session 1 registration closes today.", "ASIA-PACIFIC"),
+    ("INDIA", "JEE Main 2027 registration closes today.", "ASIA-PACIFIC"),
     ("USA", "El-Sayed and Van Hollen press a curb on Iran war funding.", "AMERICAS"),
     ("USA", "Ex-White House chief of staff urges Democrats to repeal tariff rises.",
      "AMERICAS"),
     ("MISS UNIVERSE", "116 women compete; the 75th pageant is in San Juan on Tuesday.",
+     "AMERICAS"),
+    ("IFFI", "BRICS film roundtable opens in Goa; co-production and distribution on the agenda.",
+     "ASIA-PACIFIC"),
+    ("ARIANE 6", "VA271 due today 11:09 UTC from Kourou carrying 36 Amazon Leo satellites.",
+     "EUROPE"),
+    ("KING TIDES", "West Coast king-tide season opens today; flooding risk rises Tue\u2013Wed.",
+     "AMERICAS"),
+    ("USA", "Schumer turns 76 today; a leadership vote is set for 1 December.",
      "AMERICAS"),
 ]
 
@@ -178,7 +192,16 @@ DATECHECK = [
     "S. Korea education minister quits (Sun)",
     "Netanyahu\u2013Eisenkot talks fail (Sun)",
     "Two tankers struck, Hormuz (Sat)",
-    "Democrats' House majority (3 Nov)",
+    "Democrats 258 House seats (Sun)",
+    "Gaza, 4 killed (Sat)",
+    "Anupama retains snooker title (Sat)",
+    "Alice Huang / Nvidia chips (Sat)",
+    "India\u2013Bulgaria roadmap (Sat)",
+    "West Bank settler attacks (Sun)",
+    "Jordan, Gulf back Bahrain (Sun)",
+    "DRC Ebola, WHO sheltering (Sun)",
+    "Libya port attack (Sun)",
+    "Mongolia president quits (Thu)",
 ]
 
 SOURCES = ("Sources: AFP \u00b7 BBC \u00b7 IANS \u00b7 KCNA via AFP \u00b7 MarketIndex "
@@ -956,19 +979,30 @@ def draw_briefs(cv, y):
 
 
 def draw_datecheck(cv, y):
+    # Wave-2: 23 items no longer fit one flowing block, so the footer is
+    # two columns of small type (sans-10, 11 px leading). Items are split
+    # by count; each column wraps its own half of the joined text.
     f_title = F("sans-bold-14")
     cv.text(f_title, X0, y + 13,
             "DATE CHECK \u2014 DELIBERATELY LEFT OUT: NOT 23 NOVEMBER", RED)
     cv.hline(X0, y + 17, CW, RED, 1)
-    f_body = F("sans-12")
-    joined = " \u00b7 ".join(DATECHECK)
-    lines = f_body.wrap(joined, CW)
-    if len(lines) > 3:
-        warn("date check too long (%d lines)" % len(lines))
-        lines = lines[:3]
-    for j, ln in enumerate(lines):
-        cv.text(f_body, X0, y + 30 + j * 14, ln, INK)
-    return y + 30 + len(lines) * 14
+    f_body = F("sans-10")
+    gap = 16
+    col_w = (CW - gap) // 2
+    half = (len(DATECHECK) + 1) // 2
+    cols = []
+    max_lines = 0
+    for part in (DATECHECK[:half], DATECHECK[half:]):
+        lines = f_body.wrap(" \u00b7 ".join(part), col_w)
+        cols.append(lines)
+        max_lines = max(max_lines, len(lines))
+    if max_lines > 4:
+        warn("date check too long (%d lines per column)" % max_lines)
+    for c, lines in enumerate(cols):
+        cx = X0 + c * (col_w + gap)
+        for j, ln in enumerate(lines):
+            cv.text(f_body, cx, y + 26 + j * 11, ln, INK)
+    return y + 26 + max_lines * 11
 
 
 def draw_sources(cv, y):
